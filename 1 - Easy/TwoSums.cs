@@ -4,20 +4,21 @@ public class TwoSums
 {
     public int[] TwoSum(int[] nums, int target)
     {
-        var dict = new Dictionary<int, int>();
+        var dic = new Dictionary<int, int>();
 
-        for (var i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length; i++)
         {
-            var diff = target - nums[i];
-
-            if (dict.TryGetValue(diff, out int value))
+            int complement = target - nums[i];
+            if (dic.ContainsKey(complement))
             {
-                return [value, i];
+                return new int[] { dic[complement], i };
             }
-
-            dict.TryAdd(nums[i], i);
+            else
+            {
+                dic[nums[i]] = i;
+            }
         }
 
-        return [];
+        return null!;
     }
 }
