@@ -2,21 +2,17 @@
 
 public class TwoSums
 {
-    public int[] TwoSum(int[] nums, int target)
+    public static int[] TwoSum(int[] nums, int target)
     {
         var dic = new Dictionary<int, int>();
 
         for (int i = 0; i < nums.Length; i++)
         {
             int complement = target - nums[i];
-            if (dic.ContainsKey(complement))
-            {
-                return new int[] { dic[complement], i };
-            }
+            if (dic.TryGetValue(complement, out int value))
+                return [value, i];
             else
-            {
                 dic[nums[i]] = i;
-            }
         }
 
         return null!;
