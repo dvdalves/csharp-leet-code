@@ -33,8 +33,14 @@ internal class Program
 
                     var romanToInteger = new RomanToInteger();
 
-                    var retorno = romanToInteger.RomanToInt(word);
+                    var retorno = RomanToInteger.RomanToInt(word);
                     Console.WriteLine(retorno);
+                    break;
+                case 4:
+                    //Longest Common Prefix
+                    var longestCommonPrefix = new LongestCommonPrefix();
+                    var result4 = longestCommonPrefix.FindLongestCommonPrefix(["flower", "flow", "flight"]);
+                    Console.WriteLine(result4);
                     break;
 
                 default:

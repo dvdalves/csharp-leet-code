@@ -2,7 +2,7 @@
 
 public class RomanToInteger
 {
-    public int RomanToInt(string s)
+    public static int RomanToInt(string s)
     {
         var total = 0;
 
@@ -14,15 +14,13 @@ public class RomanToInteger
                 i++;
             }
             else
-            {
                 total += GetRomanValue(s[i]);
-            }
         }
 
         return total;
     }
 
-    private int GetRomanValue(char romanChar)
+    private static int GetRomanValue(char romanChar)
     {
         return romanChar switch
         {
