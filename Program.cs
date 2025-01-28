@@ -42,6 +42,12 @@ internal class Program
                     var result4 = longestCommonPrefix.FindLongestCommonPrefix(["flower", "flow", "flight"]);
                     Console.WriteLine(result4);
                     break;
+                case 5:
+                    //Valid Parentheses
+                    var validParentheses = new ValidParentheses();
+                    var result5 = validParentheses.IsValid("s");
+                    Console.WriteLine(result5);
+                    break;
 
                 default:
                     Console.WriteLine("Invalid option selected.");
