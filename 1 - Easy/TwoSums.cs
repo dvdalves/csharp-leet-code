@@ -11,8 +11,7 @@ public class TwoSums
             int complement = target - nums[i];
             if (dic.TryGetValue(complement, out int value))
                 return [value, i];
-            else
-                dic[nums[i]] = i;
+            dic[nums[i]] = i;
         }
 
         return null!;
